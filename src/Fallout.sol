@@ -6,24 +6,24 @@
 
 // The story of Rubixi is a very well known case in the Ethereum ecosystem. The company changed its name from 'Dynamic Pyramid' to 'Rubixi' but somehow they didn't rename the constructor method of its contract:
 
-contract Rubixi {
-    address private owner;
+// contract Rubixi {
+//     address private owner;
 
-    function DynamicPyramid() {
-        owner = msg.sender;
-    }
+//     function DynamicPyramid() {
+//         owner = msg.sender;
+//     }
 
-    function collectAllFees() {
-        owner.transfer(this.balance);
-    }
-}
+//     function collectAllFees() {
+//         owner.transfer(this.balance);
+//     }
+// }
 //   ...
 // This allowed the attacker to call the old constructor and claim ownership of the contract, and steal some funds. Yep. Big mistakes can be made in smartcontractland.
 
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 
-import "openzeppelin-contracts-06/math/SafeMath.sol";
+import "@openzeppelin-contracts-06/math/SafeMath.sol";
 
 contract Fallout {
     using SafeMath for uint256;
