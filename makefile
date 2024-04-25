@@ -14,4 +14,7 @@ king:; forge script script/ExploitKing.s.sol --rpc-url $(SEPOLIA_RPC_URL) --priv
 
 reentrance:; forge script script/ExploitReentrance.s.sol --rpc-url $(SEPOLIA_RPC_URL) --private-key $(PRIVATE_KEY) --tc ExploitReentrance --broadcast -vvvv
 
+elevator:; forge script script/ExploitElevator.s.sol --rpc-url $(SEPOLIA_RPC_URL) --private-key $(PRIVATE_KEY) --tc ExploitElevator --broadcast -vvvv
+
+
 
